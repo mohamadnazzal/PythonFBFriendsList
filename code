@@ -1,0 +1,18 @@
+
+///// This code done by Mohamad Nazzal /////
+print "Wait.."
+
+FileName = ("your file name.txt")
+ReadyFile = "Ready.txt"
+
+word_to_be_deleted_list = ['   ','</body>','<div class="_- _let">','<div class="p _- _pi _lej uiBoxWhite noborder">','charset=UTF-8" />','content="text/html',';','<meta http-equiv="Content-Type" content="text/html','am','pm','<div class="pam _- _pi _lej uiBoxWhite noborder">','<div class="_3-96 _2pio _2lek _2lel">',"</div> ",'<div class="_3-94 _2lem">','Dec','Jan','Feb','Mar','Apr','May','Jul','Aug','Sep','Oct','Nov','1','2','3','4','5','6','7','8','9','0',':',',','</div>','<html>', '</html>','meta']
+filein = open(FileName)
+fileout = open(ReadyFile, "w+")
+for line in filein:
+    for word in word_to_be_deleted_list:
+        line = line.replace(word, "\n")
+    fout.write(line)
+filein.close()
+fileout.close()
+
+print "done"
